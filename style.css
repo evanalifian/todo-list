@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+button {
+  border: 0;
+}
+
+nav, main {
+  padding: 0 1rem;
+}
+
+.input-box, .btn-button {
+  padding: 4px;
+}
+
+main .card .card-number, main .card .delete-button {
+  flex: 1;
+}
+
+.form-box .form-header button.close-button {
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.input-box {
+  width: 80%;
+  border-radius: 8px 0 0 8px;
+  border: 2px solid darkgreen;
+}
+
+.input-box:focus {
+  outline: 2px solid lightgreen;
+}
+
+.btn-button {
+  width: 20%;
+  border-radius: 0 8px 8px 0;
+  background-color: darkgreen;
+  color: whitesmoke;
+}
+
+.back-drop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #33333381;
+  z-index: 1;
+  display: none;
+}
+
+.back-drop.active {
+  display: block;
+}
+
+
+/* ===== Form Box ===== */
+.form-box {
+  position: absolute;
+  background-color: darkslategray;
+  padding: 15px;
+  border-radius: 8px;
+  top: 60px;
+  right: 1rem;
+  left: 1rem;
+  display: none;
+  color: whitesmoke;
+}
+
+.form-box.active {
+  display: block;
+}
+
+.form-box .form-header {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.form-box .form-header  h3 {
+  width: 80%;
+}
+
+.form-box .form-header  button.close-button {
+  width: 20%;
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+.form-box .form-handling {
+  display: flex;
+}
+/* ===== Akhir Form Box ===== */
+
+
+/* ===== Navbar ===== */
+nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+nav button.add-button {
+  padding: 3px;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 12px;
+  background-color: green;
+  color: whitesmoke;
+}
+/* ===== Akhir Navbar ===== */
+
+
+/* ===== Main ===== */
+main {
+  padding-top: 4.5rem;
+}
+
+main form.search-box {
+  position: inherit;
+  display: flex;
+  z-index: -1;
+  background-color: white;
+  margin-bottom: 30px;
+}
+
+main .card {
+  width: 100%;
+  display: flex;
+  column-gap: 5px;
+  background-color: #aeaeae;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: -2;
+  margin-bottom: 15px;
+  position: inherit;
+}
+
+main .card .card-title {
+  flex: 8;
+}
+
+main .card .delete-button {
+  font-size: 18px;
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+}
+/* ===== Akhir Main ===== */
+
+
+
+/* ===== Responisve Breakpoint ===== */
+@media (min-width: 480px) {
+  nav, main {
+    width: 480px;
+    margin: auto;
+  }
+}
